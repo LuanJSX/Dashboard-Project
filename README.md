@@ -1,12 +1,39 @@
-# React + Vite
+# 📊 Dashboard Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um painel administrativo moderno desenvolvido com **React + Vite + TailwindCSS**, focado em **visualização de dados, relatórios e gestão de informações**.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
+- [React 19](https://react.dev/) – Biblioteca principal para construção da interface
+- [Vite](https://vitejs.dev/) – Build tool rápido e otimizado
+- [TailwindCSS](https://tailwindcss.com/) – Estilização responsiva e customizável
+- [Lucide React](https://lucide.dev/) – Ícones modernos e leves
+- [Recharts](https://recharts.org/) – Gráficos e visualizações de dados
 
-## Expanding the ESLint configuration
+## 📂 Estrutura do Projeto
+- **Dashboard**: visão geral com métricas principais  
+- **Gráficos de Receita**: receitas e despesas mensais  
+- **Pedidos Recentes**: lista de últimos pedidos de clientes  
+- **Top Produtos**: produtos com maior desempenho  
+- **Atividades Recentes do Sistema**: notificações em tempo real de eventos do sistema  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+https://github.com/user-attachments/assets/e5ef5927-443e-48dc-a618-d98f99d3252c
+
+
+## ⚡ Como Rodar o Projeto
+```bash
+# Instalar dependências
+npm install
+
+# Rodar em ambiente de desenvolvimento
+npm run dev
+
+# Gerar build de produção
+npm run build
+
+# Visualizar build
+npm run preview 
+
+# # 
+[esse.webm](https://github.com/user-attachments/assets/b4296498-0390-4145-8366-7ff0343a933e)
