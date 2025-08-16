@@ -1,4 +1,4 @@
-import { MoreHorizontal } from "lucide-react";
+import { MoreHorizontal, TrendingDown, TrendingUp } from "lucide-react";
 import React from "react";
 
 function TableSection() {
@@ -37,7 +37,38 @@ function TableSection() {
             "data": "2024-01-14"
           }
         ];
+           
 
+        const topProducts = [
+          {
+            name: "MacBook Pro 16",
+            sales: 1247,
+            revenue: "$2,987,044",
+            trend: "up",
+            change: "+12%",
+          },
+          {
+            name: "iPhone 15 Pro",
+            sales: 2156,
+            revenue: "$2,587,044",
+            trend: "up",
+            change: "-8%",
+          },
+          {
+            name: "AirPods Pro",
+            sales: 3421,
+            revenue: "$852,229",
+            trend: "down",
+            change: "-3%",
+          },
+          {
+            name: "iPad Air",
+            sales: 987,
+            revenue: "$591,213",
+            trend: "up",
+            change: "+15%",
+          },
+        ];
       
   
     const getStatusColor = (status) => {
@@ -156,14 +187,51 @@ function TableSection() {
             </h3>
         </div>
         <p className="text-sm text-slate-500 dark:text-slate-400">
-        produtos com melhor desempenho
+        Produtos com melhor desempenho
         </p>
       </div>
       <button className="text-blue-500 hover:text-blue-700 text-sm font-medium">Ver todos
       </button>
       </div>
       {/* Dynamic Data */}
-      <div className="">
+      <div className="p-6 space-y-4">
+        {topProducts.map((product, index) => {
+          return (
+            <div className="flex items-center justify-between p-4 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+              <div className="flex-1">
+                <h4 className="text-sm font-semibold text-slate-800 dark:text-white">
+                  {product.name}
+                </h4>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  {product.sales}
+                </p>
+              </div>
+              <div className="text-right">
+                <p className="text-sm font-semibold text-slate-800 dark:text-white">
+                  {product.revenue}
+                </p>
+                <div className="flex items-center space-x-1">
+                  {product.trend === "up" ? (
+                    <TrendingUp className="w-3 h-3 text-emerald-500" />
+                  ) : (
+                    <TrendingDown className="text-red-500 w-3 h-3" />
+                  )}
+                  <span
+                    className={`text-xs font-medium ${
+                      product.trend === "up"
+                        ? "text-emerald-500"
+                        : "text-red-500"
+                    }`}
+                  >
+                    {product.change}
+                  </span>
+                </div>
+              </div>
+            </div>
+          );
+
+          
+        })}
 
       </div>
       </div>
